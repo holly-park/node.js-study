@@ -1,0 +1,30 @@
+<script>
+    var curPos=1;
+    function goNext()
+    {
+     var imagenames = ["apple.jpg", "banana.jpg", "mango.jpg", "pineapple.jpg"];
+     var image = document.getElementById("image1");
+     image.src = "./images/" + imagenames[curPos];
+    curPos++;
+    if(curPos>=imagenames.length)
+    {
+        curPos=0;
+    }
+
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src = "images/apple.jpg" id="image1" style="width: 200px; height: 200px"><br>
+    <input type="button" value="next" onclick="goNext()">
+
+</body>
+</html>

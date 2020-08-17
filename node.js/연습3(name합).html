@@ -1,0 +1,45 @@
+<script>
+    function goAdd1()
+    {
+      var result=0;
+      for(i=1; i<=5; i++)
+      {
+          num=document.getElementById("num"+i).value;
+          result = result + parseInt(num);
+      }
+      document.getElementById("result").innerHTML=result;
+    }
+
+    function goAdd2()
+    {
+          var nums = document.getElementsByName("num");
+          var result=0;
+          for(i=0; i<nums.length; i++)
+          {
+            result = result + parseInt(nums[i].value);
+          }
+          document.getElementById("result").innerHTML=result;
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <input type="text" name="num" id="num1" value="1"><br>
+        <input type="text" name="num" id="num2" value="2"><br>
+        <input type="text" name="num" id="num3" value="3"><br>
+        <input type="text" name="num" id="num4" value="4"><br>
+        <input type="text" name="num" id="num5" value="5"><br>
+        --------------------------------------<br>
+        합계 : <span id="result"></span><br>
+    </p>
+        <input type="button" value="계산하기1(id속성)" onclick="goAdd1()">
+        <input type="button" value="계산하기2(name속성)" onclick="goAdd2()">
+</body>
+</html>
